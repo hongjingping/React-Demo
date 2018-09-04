@@ -50,12 +50,11 @@ class TodoList extends Component {
       <div>
         <div>
           <input value={ this.state.inputValue } onChange = { this.handleInputChange.bind(this) } />
-          <button onClick = { this.handleBtnClick.bind(this) }>add</button>
+          <button className='red-btn' style={{background: 'red'}} onClick = { this.handleBtnClick.bind(this) }>add</button>
         </div>
         <ul>
           {
             this.state.list.map((item, index) => {
-              // return <li onClick={ this.handelItemClick.bind(this, index) } key={index}>{item}</li>
               return <TodoItem handelDelete={this.handelDelete.bind(this)} comtent={item} key={index} index={index}/>
             })
           }
