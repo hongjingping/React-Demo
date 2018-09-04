@@ -24,6 +24,14 @@ class TodoList extends Component {
     })
   }
 
+  handelItemClick (index) {
+    const list = [...this.state.list]
+    list.splice(index, 1)
+    this.setState({
+      list
+    })
+  }
+
   // 必须有一个函数render
   render() {
     // JSX语法
@@ -36,7 +44,7 @@ class TodoList extends Component {
         <ul>
           {
             this.state.list.map((item, index) => {
-              return <li key={index}>{item}</li>
+              return <li onClick={ this.handelItemClick.bind(this, index) } key={index}>{item}</li>
             })
           }
         </ul>
