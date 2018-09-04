@@ -7,7 +7,9 @@ class App extends Component {
     // JSX语法
     return (
       <div>
-       hello, I am wikiHong~
+        {/* 可以直接写JS表达式，不可以直接写js语句 */}
+        { 1 + 2 },
+        hello, I am wikiHong~
       </div>
     );
   }
