@@ -1,6 +1,6 @@
-import React from 'react'
+import React, {Component} from 'react'
 
-class TodoItem extends React.Component {
+class TodoItem extends Component {
   // 子组件要调用父组件传过来的方法
   handelDelete () {
     this.props.handelDelete(this.props.index)

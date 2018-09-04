@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment} from 'react';
 import TodoItem from './TodoItem.js'
 
 // 定义一个React组件
@@ -47,7 +47,7 @@ class TodoList extends Component {
   render() {
     // JSX语法
     return (
-      <div>
+      <Fragment>
         <div>
           <input value={ this.state.inputValue } onChange = { this.handleInputChange.bind(this) } />
           <button className='red-btn' style={{background: 'red'}} onClick = { this.handleBtnClick.bind(this) }>add</button>
@@ -59,7 +59,7 @@ class TodoList extends Component {
             })
           }
         </ul>
-      </div>
+      </Fragment>
     );
   }
 }
